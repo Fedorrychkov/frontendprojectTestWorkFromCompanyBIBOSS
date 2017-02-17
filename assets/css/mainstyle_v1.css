@@ -1,0 +1,215 @@
+body{
+	background-color: #f5f6f1;
+	background-image: url(../img/bg.png);
+	background-repeat: repeat;
+	font-family: Arial;
+	font-size: 16px;
+	min-width: 1100px;
+	color:#000;
+	line-height: 20px;
+}
+
+/****something****/
+.background{
+	background-color:#fff;
+	border-radius: 10px 10px 0 0;
+}
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+/**** Header ****/
+header{
+	padding:20px 0 20px 0;
+}
+header .logo{
+	padding: 0;
+	margin:0;
+}
+
+
+/**** MainContent ****/
+.maincontent{
+	background-image: url(../img/man.png);
+	background-position: top;
+	background-repeat: no-repeat;
+	border-radius: 10px 10px 0 0;
+	position: relative;
+	padding:0 100px 62px 100px;
+
+}
+.maincontent .head{
+	color:#fff;
+	text-align: center;
+	position: relative;
+}
+.head h1{
+	margin: 0;
+	padding:62px 0 0 0;
+	font-weight: normal;
+	font-size: 30px;
+}
+.head h2{
+	font-weight: bold;
+	font-size: 60px;
+	padding: 48px 0 0 0;
+	margin:0;
+}
+.maincontent .mac{
+	max-width: 722px;
+	max-height: 410px;
+	padding:42px 0 42px 0;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+.maincontent .mac p{
+	font-family: Tahoma;
+	position: absolute;
+    display: block;
+    margin:22% 0 0 0;
+    width: 100%;
+    text-align: center;
+}
+.maincontent .mac a{
+	color:#5c37ef;
+	white-space: nowrap;
+}
+
+.first ul{
+	padding:0 0 0 16px;
+}
+.first ul li{
+	padding: 5px 0 0 0;
+}
+.first ul li span{
+	color:#a8a8a8;
+}
+.second{
+	background-color: #f7f8fa;
+	padding:34px 0 34px 0;
+	margin:40px 0 40px 0;
+}
+
+.second div{
+	text-align: center;
+	font-weight: 400;
+}
+.second div p{
+	margin:0 0 22px 0;
+}
+.second div p span{
+	color:#396ea9;
+	text-decoration: underline;
+}
+.second div h3{
+	font-size: 24px;
+	font-weight: normal;
+	margin:0;
+}
+.third div{
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+.third div h4{
+	font-weight: normal;
+	font-size: 24px;
+	margin: 0;
+}
+.third div ul{
+	padding: 0 0 0 16px;
+	margin: 31px 0 0 0;
+}
+.third div ul li:nth-child(1){
+	padding: 0;
+}
+.third div ul li{
+	padding: 20px 0 0 0;
+}
+.third .right p span{
+	color:#1ea01e;
+	font-size: 40px;
+	font-weight: bold;
+	white-space: nowrap;
+	display: block;
+	padding: 0 0 25px 0;
+}
+.third .right p{
+	margin:36px 0 23px 0;
+	padding: 0;
+}
+.four{
+	margin: 40px 0 34px 0;
+}
+.formbody{
+	background-color: #fff4b3;
+	padding: 30px 140px 30px 140px;
+}
+.formbody h4{
+	margin:0;
+	padding:0;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+}
+.formbody p{
+	margin:0 0 15px 0;
+	padding: 0;
+	clear:both; 
+	text-align:right;
+}
+.formbody form{
+	margin: 32px 0 0 0;
+}
+.formbody form label{
+	font-size: 14px;
+	float: left;
+	padding: 15px 0 0 0;
+	font-weight: 500;
+}
+.formbody form input{
+	border:#a6acb2 1px solid;
+	border-radius: 5px;
+	outline:none;
+ 	min-width: 345px;
+ 	padding-left: 15px;
+  	height: 42px;
+
+}
+.formbody form input[type=submit]{
+	border:none;
+	background-color: #b6d88a;
+  	width: 160px;
+  	min-width: 160px;
+  	max-width: 160px;
+  	height: 40px;
+  	padding: 0;
+  	margin:0 0 0 159px;
+  	cursor: pointer;
+  	color:#edf5e3;
+}
+.formbody form input[type=submit]:hover{
+	color:#fff;
+	background-color: #0d972b;
+}
+
+
+.last span{
+	font-weight: bold;
+	line-height: 22px;
+}
+.last p{
+	margin:0;
+	padding: 0;
+}
+footer{
+	background-color: #000;
+}
+footer img{
+	margin: 19px 0 19px 0;
+}
