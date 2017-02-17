@@ -166,6 +166,14 @@ header .logo{
 .formbody form{
 	margin: 32px 0 0 0;
 }
+.formbody p .error{
+	display: block;
+	color:#ff0000;
+	text-align: left;
+	width: 340px;
+	margin: 0 0 0 159px;
+	padding: 15px 0px 0 0;
+}
 .formbody form label{
 	font-size: 14px;
 	float: left;
@@ -193,11 +201,22 @@ header .logo{
   	cursor: pointer;
   	color:#edf5e3;
 }
+.formbody form datalist{
+	-webkit-user-datalist: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
 .formbody form input[type=submit]:hover{
 	color:#fff;
 	background-color: #0d972b;
 }
-
+.has-error{
+	background-color: rgba(166, 172, 178, 0.43);
+}
 
 .last span{
 	font-weight: bold;

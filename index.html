@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!-- Web Developer Fedor Rychkov - fedorrychkov.com test work for БИБАСС
+This website in my github
+https://github.com/Fedorrychkov/frontendprojectTestWorkFromCompanyBIBOSS
+-->
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -65,21 +69,21 @@
 				<div class="formbody">
 					<h4>Получите ссылку</h4>
 					<form method="POST" action="">
-						<p><label>Ваше имя</label>
-						<input type="text" name="Name" placeholder="Представьтесь, пожалуйста"></p>
-						<p><label>Номер телефона</label>
-						<input type="tel" name="Phone" placeholder="Для начисления баллов и связи с Вами"></p>
-						<p><label>Название франшизы</label>
-							<input type="text" name="Franchise" list="list" placeholder="Например, Subway">
+						<p class="parentA"><label for="name">Ваше имя</label>
+						<input type="text" name="Name" id="name" placeholder="Представьтесь, пожалуйста"></p>
+						<p class="parentB"><label for="phone">Номер телефона</label>
+						<input type="tel" name="Phone" id="phone" placeholder="Для начисления баллов и связи с Вами"></p>
+						<p class="parentD"><label for="franch">Название франшизы</label>
+							<input type="text" name="Franchise" id="franch" list="list" placeholder="Например, Subway">
 							<datalist id="list">
-								<option value="Проворный такачик" />
+								<option value="Проворный ткачик" />
 								<option value="ПРОФИ-СПОРТ" />
 								<option value="Проспект" />
 								<option value="Просто Чудо" />
 								<option value="Прокат Пони+" />
 							</datalist>
 						</p>
-						<input type="submit" name="Go" value="Получить ссылку">
+						<input type="submit" name="submit" value="Получить ссылку">
 						
 					</form>
 				</div>
@@ -96,6 +100,63 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	
+	<script type="text/javascript" src="assets/js/phonemask.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$("#phone").mask("9 999 999 99 99");
+
+			var validName = false;
+			var validPhone = false;
+			var validFranchise = false;
+
+			$("form").submit(function(event){ //Не знал как надо сделать, сделал по кнопке. Можно в риал тайм проверять.
+				event.preventDefault();
+
+				var name = $("#name").val();
+				var phone = $("#phone").val();
+				var franch = $("#franch").val();
+
+
+				if (name == "") {
+					$("#name").removeClass("has-success").addClass("has-error");
+					$(".parentA .error").remove();
+					$(".parentA").append("<span class='error'>Введите ваше имя</span>")
+					validName = false;
+				} else{
+					$("#name").removeClass("has-error").addClass("has-success");
+					$(".parentA .error").remove();
+					validName = true;
+				}
+
+				if (phone == "") {
+					$("#phone").removeClass("has-success").addClass("has-error");
+					$(".parentB .error").remove();
+					$(".parentB").append("<span class='error'>Укажите правильный телефон</span>")
+					validPhone = false;
+				} else{
+					validPhone = true;
+					$("#phone").removeClass("has-error").addClass("has-success");
+					$(".parentB .error").remove();
+				}
+
+				if (franch == "") {
+					$("#franch").removeClass("has-success").addClass("has-error");
+					$(".parentD .error").remove();
+					$(".parentD").append("<span class='error'>Введите франчайз</span>")
+					validFranchise = false;
+				} else{
+					$("#franch").removeClass("has-error").addClass("has-success");
+					$(".parentD .error").remove();
+					validFranchise = true;
+				}
+
+				if (validName == true && validPhone == true && validFranchise == true) {
+					$("form").unbind("submit").submit();
+				}
+			});
+		});
+	</script>
+
 </body>
 </html>
